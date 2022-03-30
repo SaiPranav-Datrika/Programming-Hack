@@ -15,7 +15,6 @@ class Solution
     //Function to sort the array using bubble sort-almost O(N)time complexity algorithm.
     void bubbleSort(int a[], int n)
     {
-        // Your code here  
         for(int i=0;i<n-i-1;i++){
         int min_id=i,max_id=i;
         for(int j=i;j<n-i;j++){
@@ -24,7 +23,7 @@ class Solution
             if(a[max_id]<a[j])
                max_id=j;
         }
-        //if(i!=min_id)
+       
         swap((a+i),(a+min_id));
        if(i==max_id)
            max_id=min_id;
