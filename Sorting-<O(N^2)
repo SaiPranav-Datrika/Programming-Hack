@@ -12,7 +12,7 @@ void swap(int *xp, int *yp)
 class Solution
 {
     public:
-    //Function to sort the array using bubble sort-almost O(N)time complexity algorithm.
+    //Function to sort the array with optimal time complexity algorithm.
     void bubbleSort(int a[], int n)
     {
         for(int i=0;i<n-i-1;i++){
