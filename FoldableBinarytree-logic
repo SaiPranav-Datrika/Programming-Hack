@@ -24,7 +24,6 @@ bool foldable(Node* root1,Node* root2){
 
 bool IsFoldable(Node* root)
 {
-    // Your code goes here
     if((root==NULL)||(root->left==NULL&&root->right==NULL))
         return true;
     if(root->left!=NULL && root->right!=NULL)
