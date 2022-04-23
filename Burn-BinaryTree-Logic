@@ -20,11 +20,14 @@ if(root==NULL)
     {found=true;}
     
     if(found==true && root->left!=NULL){
-    return max(height_level(root->left,startnode,level+1,found),height_level(root->right,startnode,level,found));
-    else if(found==true && root->right!=NULL)
-     return max(height_level(root->left,startnode,level,found),height_level(root->right,startnode,level+1,found));
-     
-     return max(height_level(root->left,startnode,level,found),height_level(root->right,startnode,level,found));
+    height_level(root->left,startnode,level+1,found);
+    height_level(root->right,startnode,level,found);}
+    else if(found==true && root->right!=NULL){
+      height_level(root->left,startnode,level,found);
+     height_level(root->right,startnode,level+1,found);}
+     else{
+     height_level(root->left,startnode,level,found);
+     height_level(root->right,startnode,level,found);}
   }
   
   int findtime_burn(Node* root){
