@@ -34,8 +34,8 @@ if(root==NULL)
   bool found=false;
   int level=0;
   height_level(root,startnode,level,found);
-  int l=height(root->left);
-  int r=height(root->right);
+  int l=height(root->left)+1;
+  int r=height(root->right)+1;
   int actualtime=l+r-level;
   
   return actualtime;
