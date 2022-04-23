@@ -30,7 +30,7 @@ if(root==NULL)
      height_level(root->right,startnode,level,found);}
   }
   
-  int findtime_burn(Node* root){
+  int findtime_burn(Node* root,int starnode){
   bool found=false;
   int level=0;
   height_level(root,startnode,level,found);
