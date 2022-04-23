@@ -1,0 +1,29 @@
+Problem Statement:Given a binary tree, the task is to find the maximum path sum. The path may start and end at any node in the tree.
+Solution:
+
+DryRun:
+
+ int maxpath(Node* root,int &res){
+      if(root==NULL)
+       return -100000;
+       if((root->left==NULL)&&(root->right==NULL))
+        { res=max(res,root->data);
+            return root->data;}
+       
+       int l=maxpath(root->left,res);
+       int r=maxpath(root->right,res);
+       int max_left=max(l+root->data,root->data);
+       int max_right=max(r+root->data,root->data);
+       int max_single=max(max(l,r),root->data);
+       int max_l_r=max(max_left,max_right);
+       int val=max(max(max_l_r,l+r+root->data),max_single);
+         res=max(res,val);
+          return max_l_r;
+       
+         }
+    int findMaxSum(Node* root)
+    {
+        int res=(-100000);
+        maxpath(root,res);
+        return res;        
+    }
