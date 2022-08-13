@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class Node{
+    public:
+      int data;
+      Node* right;
+      Node* left;
+      
+      Node(int x){
+          data=x;
+          right=NULL;
+          left=NULL;
+      }
+      
+      void Nodes_list(Node* root,Node* head,Node** tail);
+};
+void Node::Nodes_list(Node* root,Node* head,Node** tail) {
+    cout<<"root:";
+    cout<<root<<"\n";  
+    cout<<"head:";
+    cout<<head<<"\n";
+    cout<<"tail:";
+    cout<<tail<<"\n";
+}
+
+int main() {
+Node* root;
+root=new Node(10); //actually allocating a memory space with root as address!!
+
+Node* head=NULL;  // creating a head parameter to store data,it helps in passing data that is in head in a function call,not heads address..
+Node* tail=NULL;  
+root->Nodes_list(root,head,&tail);  // here passing address of tail indicates your actually pointing to tail parameter in dynamic memory.
+                                    // In case of root, your passing address of root only, since you have defined it in dynamic memory.
+                                    // In case of head, you are passing the data residing in head node!!
+ //Please try executing this code for understanding address passing in recursive function call!!...                                   
+	return 0;
+}
