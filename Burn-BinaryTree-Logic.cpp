@@ -1,4 +1,4 @@
-Note:Please do let me know, if my logic fails or there is any faluts..Thanks in advance!!
+/*Note:Please do let me know, if my logic fails or there is any faluts..Thanks in advance!!
 
 Problem Statement:
 You have been given a binary tree of 'N' unique nodes and a Start node from where the tree will start to burn.
@@ -7,7 +7,7 @@ It is given that it takes 1 minute for the fire to travel from the burning node 
 
 Time Complexity:O(Number Of Nodes),SpaceComplexity:Height(BinaryTree)
 
-link to the problem statement:https://www.codingninjas.com/codestudio/problems/time-to-burn-tree_630563
+link to the problem statement:https://www.codingninjas.com/codestudio/problems/time-to-burn-tree_630563*/
 
 int height(Node* root){
   if(root==NULL)
